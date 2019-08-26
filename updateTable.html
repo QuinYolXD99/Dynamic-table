@@ -174,7 +174,6 @@
             var id = 0;
             var update = false;
             var currentRow = null;
-            console.log($(currentRow).attr("id"))
 
             function showForm() {
                 $(".class-list").fadeOut();
@@ -220,7 +219,7 @@
                         type: 'error',
                         title: 'Oops...',
                         text: 'Please enter a valid email address...'
-                    })
+                    });
                 } else {
                     var rows = $('<tr>', {
                         id: ++id,
@@ -242,7 +241,7 @@
                     }
                     var btns = $("<div>", {
                         class: "btns"
-                    }).css({margin:0}).append($(button).text("update"));
+                    }).append($(button).text("update"));
 
                     $(btns).append($(button2).text("delete"));
 
@@ -262,7 +261,6 @@
                 }
             });
 
-
             $(document).on("mouseenter", "tbody tr", function () {
                 $(".btns").show()
             });
@@ -275,7 +273,6 @@
             $(document).on('click', '.update-btn', function () {
                 update = true;
                 currentRow = $(this).closest("tr");
-                console.log($(currentRow).attr("id"))
                 showForm();
             });
 
