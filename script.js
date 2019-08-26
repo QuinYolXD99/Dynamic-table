@@ -8,14 +8,14 @@
 
             function showForm() {
                 $(".class-list").hide(500);
-                $(".createForm").fadeIn();
+                $(".createForm").show(500);
             }
 
             function closeForm() {
                 update = false;
                 $("input").val(null);
                 $(".createForm").hide(500);
-                $(".class-list").fadeIn();
+                $(".class-list").show(500);
             }
 
             $(".createForm").hide();
