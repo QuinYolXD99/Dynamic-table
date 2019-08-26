@@ -7,14 +7,14 @@
             var currentRow = null;
 
             function showForm() {
-                $(".class-list").fadeOut();
+                $(".class-list").hide(500);
                 $(".createForm").fadeIn();
             }
 
             function closeForm() {
                 update = false;
                 $("input").val(null);
-                $(".createForm").fadeOut();
+                $(".createForm").hide(500);
                 $(".class-list").fadeIn();
             }
 
