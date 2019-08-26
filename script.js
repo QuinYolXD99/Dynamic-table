@@ -59,14 +59,14 @@
                         email: email
                     });
                     var button = $('<button>', {
-                        class: "update-btn btn btn-sm btn-outline-dark",
+                        class: "update-btn btn btn-sm btn-info",
                     });
                     var button2 = $('<button>', {
-                        class: "delete-btn btn btn-sm btn-outline-dark"
+                        class: "delete-btn btn btn-sm btn-danger"
                     }).css("margin-left", "10px");
 
                     for (let i = 0; i < texts.length; i++) {
-                        var col = $('<td>', {
+                        $('<td>', {
                             class: "col_" + i
                         }).text($(rows).attr(texts[i])).appendTo($(rows))
                     }
@@ -75,8 +75,9 @@
                     }).append($(button).text("update"));
 
                     $(btns).append($(button2).text("delete"));
+                    $(btns).wrap("<center></center>");
 
-                    var col4 = $('<td>').append(btns).appendTo($(rows));
+                    $('<td>').css({width:"220px"}).append(btns).appendTo($(rows));
 
                     if (!update) {
                         $("tbody").append($(rows))
