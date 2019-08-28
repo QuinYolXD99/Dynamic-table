@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> -->
+    <style>
+        body,
+        html {
+            height: 100%;
+            /* background: url("https://images.unsplash.com/photo-1517249865690-ee36eb09e596?ixlib=rb-1.2.1&w=1000&q=80"); */
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow-x: hidden;
+            background-color: #E8E7E7;
+        }
+
+        .btn-raised {
+            border-radius: 40px;
+        }
+
+        .is-focused label {
+            color: grey !important;
+        }
+
+        .table {
+            background: white;
+        }
+
+        thead th {
+            font-weight: bolder;
+            color: black !important;
+        }
+
+        tbody {
+            font-size: 14px !important;
+        }
+
+        tbody button {
+            height: 25px;
+            font-size: 12px !important;
+            padding: 0 4px !important;
+        }
+
+        .closeBtn {
+            float: right !important;
+            margin: 0;
+        }
+
+        .close {
+            font-size: 18px !important;
+            margin: 0;
+        }
+        .btns , .btn-grp{
+            width: 170px!important;
+        }
+
+        h6 {
+            margin: 0;
+        }
+
+        td {
+            padding-bottom: 5px !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <br><br><br>
+
+    <div class="row createForm">
+        <div class="col-4"></div>
+        <div class="col-4 card container">
+            <br>
+            <div class="closeBtn">
+                <div class="close">x</div>
+            </div>
+            <hr>
+            <div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="bmd-label-static">Firstname</label>
+                    <input type="text" class="form-control" id="fname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="bmd-label-static">Lastname</label>
+                    <input type="text" class="form-control" id="lname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="bmd-label-static">Course</label>
+                    <input type="text" class="form-control" id="course">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="bmd-label-static">Year</label>
+                    <input type="number" class="form-control" id="yrLvl">
+                </div>
+                <div class="form-group">
+                    <label for="" class="bmd-label-static">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="" class="bmd-label-static">Address</label>
+                    <input type="text" class="form-control" id="address">
+                </div>
+            </div>
+            <center>
+                <button type="button" class="save-btn btn btn-raised btn-outline-success">Save</button>
+            </center>
+            <br>
+        </div>
+        <div class="col-4"></div>
+        <br>
+    </div>
+    <br>
+    <div class="row class-list">
+
+        <div class="container ">
+            <div class="row">
+                <div class="col-5">
+                </div>
+                <div class="col-5">
+
+                </div>
+                <div class="col-2">
+                    <center>
+                        <button type="button" class="add-student btn-md btn btn-raised btn-outline-success">Add Student</button>
+                    </center>
+                     <br>
+                </div>
+            </div>
+            <table class="table table-bordered ">
+                <thead class="table-info">
+                    <tr class=" text-center">
+                        <th scope="col">
+                            <h6>Id</h6>
+                        </th>
+                        <th scope="col">
+                            <h6>Name</h6>
+                        </th>
+                        <th scope="col">
+                            <h6>Course and year</h6>
+                        </th>
+                        <th scope="col">
+                            <h6>Action</h6>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <!-- <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script> -->
+
+    <script src='script.js'></script>
+</body>
+
+</html>
