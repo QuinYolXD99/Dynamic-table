@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    $('body').bootstrapMaterialDesign();
+//     $('body').bootstrapMaterialDesign();
 
     var id = 0;
     var update = false;
